@@ -4,6 +4,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Servicios from "./pages/Servicios";
+import Fiscal from "./pages/servicios/Fiscal";
+import Mercantil from "./pages/servicios/Mercantil";
+import Laboral from "./pages/servicios/Laboral";
+import MA from "./pages/servicios/MA";
+import EmpresaFamiliar from "./pages/EmpresaFamiliar";
+import Equipo from "./pages/Equipo";
+import Insights from "./pages/Insights";
+import Contacto from "./pages/Contacto";
+import AvisoLegal from "./pages/legal/AvisoLegal";
+import Privacidad from "./pages/legal/Privacidad";
+import Cookies from "./pages/legal/Cookies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +28,18 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/servicios/fiscal" element={<Fiscal />} />
+          <Route path="/servicios/mercantil" element={<Mercantil />} />
+          <Route path="/servicios/laboral" element={<Laboral />} />
+          <Route path="/servicios/ma" element={<MA />} />
+          <Route path="/empresa-familiar" element={<EmpresaFamiliar />} />
+          <Route path="/equipo" element={<Equipo />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/legal/aviso-legal" element={<AvisoLegal />} />
+          <Route path="/legal/privacidad" element={<Privacidad />} />
+          <Route path="/legal/cookies" element={<Cookies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
