@@ -24,7 +24,7 @@ import {
   Settings,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 

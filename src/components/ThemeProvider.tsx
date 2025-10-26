@@ -1,15 +1,11 @@
 import React, { ReactNode } from "react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ThemeProvider as InternalThemeProvider } from "@/contexts/ThemeContext";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <InternalThemeProvider>
       {children}
-    </NextThemesProvider>
+    </InternalThemeProvider>
   );
 }
+
