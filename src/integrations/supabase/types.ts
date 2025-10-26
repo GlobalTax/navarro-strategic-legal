@@ -44,6 +44,125 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_post_state_changes: {
+        Row: {
+          changed_at: string | null
+          changed_by: string
+          from_status: string | null
+          id: string
+          notes: string | null
+          post_id: string
+          to_status: string
+        }
+        Insert: {
+          changed_at?: string | null
+          changed_by: string
+          from_status?: string | null
+          id?: string
+          notes?: string | null
+          post_id: string
+          to_status: string
+        }
+        Update: {
+          changed_at?: string | null
+          changed_by?: string
+          from_status?: string | null
+          id?: string
+          notes?: string | null
+          post_id?: string
+          to_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_post_state_changes_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "blog_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      blog_posts: {
+        Row: {
+          author_id: string
+          category: string | null
+          content_en: string | null
+          content_es: string | null
+          created_at: string | null
+          excerpt_en: string | null
+          excerpt_es: string | null
+          featured_image: string | null
+          id: string
+          published_at: string | null
+          read_time: number | null
+          scheduled_at: string | null
+          seo_description_en: string | null
+          seo_description_es: string | null
+          seo_title_en: string | null
+          seo_title_es: string | null
+          slug_en: string | null
+          slug_es: string
+          status: string
+          tags: string[] | null
+          title_en: string | null
+          title_es: string
+          updated_at: string | null
+          view_count: number | null
+        }
+        Insert: {
+          author_id: string
+          category?: string | null
+          content_en?: string | null
+          content_es?: string | null
+          created_at?: string | null
+          excerpt_en?: string | null
+          excerpt_es?: string | null
+          featured_image?: string | null
+          id?: string
+          published_at?: string | null
+          read_time?: number | null
+          scheduled_at?: string | null
+          seo_description_en?: string | null
+          seo_description_es?: string | null
+          seo_title_en?: string | null
+          seo_title_es?: string | null
+          slug_en?: string | null
+          slug_es: string
+          status?: string
+          tags?: string[] | null
+          title_en?: string | null
+          title_es: string
+          updated_at?: string | null
+          view_count?: number | null
+        }
+        Update: {
+          author_id?: string
+          category?: string | null
+          content_en?: string | null
+          content_es?: string | null
+          created_at?: string | null
+          excerpt_en?: string | null
+          excerpt_es?: string | null
+          featured_image?: string | null
+          id?: string
+          published_at?: string | null
+          read_time?: number | null
+          scheduled_at?: string | null
+          seo_description_en?: string | null
+          seo_description_es?: string | null
+          seo_title_en?: string | null
+          seo_title_es?: string | null
+          slug_en?: string | null
+          slug_es?: string
+          status?: string
+          tags?: string[] | null
+          title_en?: string | null
+          title_es?: string
+          updated_at?: string | null
+          view_count?: number | null
+        }
+        Relationships: []
+      }
       candidatos: {
         Row: {
           anos_experiencia: number | null
@@ -703,6 +822,27 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string | null
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       nominas_summary: {
@@ -748,10 +888,17 @@ export type Database = {
       }
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      publish_scheduled_posts: { Args: never; Returns: number }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "marketing" | "editor" | "viewer"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -878,6 +1025,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "marketing", "editor", "viewer"],
+    },
   },
 } as const
