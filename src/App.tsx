@@ -21,6 +21,9 @@ import Cookies from "./pages/legal/Cookies";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/intranet/Login";
 import Dashboard from "./pages/intranet/Dashboard";
+import PersonasList from "./pages/intranet/personas/PersonasList";
+import PersonasForm from "./pages/intranet/personas/PersonasForm";
+import PersonasDetail from "./pages/intranet/personas/PersonasDetail";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +54,10 @@ const App = () => (
               {/* Intranet Routes */}
               <Route path="/intranet/login" element={<Login />} />
               <Route path="/intranet/dashboard" element={<Dashboard />} />
+              <Route path="/intranet/personas" element={<PersonasList />} />
+              <Route path="/intranet/personas/new" element={<PersonasForm />} />
+              <Route path="/intranet/personas/:id" element={<PersonasDetail />} />
+              <Route path="/intranet/personas/:id/edit" element={<PersonasForm />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>

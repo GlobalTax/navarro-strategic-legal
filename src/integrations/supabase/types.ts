@@ -285,57 +285,78 @@ export type Database = {
       empleados: {
         Row: {
           activo: boolean | null
+          area: string | null
+          avatar_url: string | null
           bonus: number | null
+          contrato_url: string | null
           coste_seg_social: number | null
           coste_total_anual: number | null
           coste_total_mensual: number | null
           created_at: string | null
           departamento: string | null
+          email: string | null
           fecha_alta: string | null
           fecha_baja: string | null
+          firma_url: string | null
           id: string
           nif: string | null
           nombre: string
           notas: string | null
+          oficina: string | null
           puesto: string | null
+          rol: string | null
           salario_base: number | null
           tipo_contrato: string | null
           variable: number | null
         }
         Insert: {
           activo?: boolean | null
+          area?: string | null
+          avatar_url?: string | null
           bonus?: number | null
+          contrato_url?: string | null
           coste_seg_social?: number | null
           coste_total_anual?: number | null
           coste_total_mensual?: number | null
           created_at?: string | null
           departamento?: string | null
+          email?: string | null
           fecha_alta?: string | null
           fecha_baja?: string | null
+          firma_url?: string | null
           id?: string
           nif?: string | null
           nombre: string
           notas?: string | null
+          oficina?: string | null
           puesto?: string | null
+          rol?: string | null
           salario_base?: number | null
           tipo_contrato?: string | null
           variable?: number | null
         }
         Update: {
           activo?: boolean | null
+          area?: string | null
+          avatar_url?: string | null
           bonus?: number | null
+          contrato_url?: string | null
           coste_seg_social?: number | null
           coste_total_anual?: number | null
           coste_total_mensual?: number | null
           created_at?: string | null
           departamento?: string | null
+          email?: string | null
           fecha_alta?: string | null
           fecha_baja?: string | null
+          firma_url?: string | null
           id?: string
           nif?: string | null
           nombre?: string
           notas?: string | null
+          oficina?: string | null
           puesto?: string | null
+          rol?: string | null
           salario_base?: number | null
           tipo_contrato?: string | null
           variable?: number | null
