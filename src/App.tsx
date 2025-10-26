@@ -31,6 +31,7 @@ import BlogHistory from "@/pages/intranet/blog/BlogHistory";
 import CasesList from "@/pages/intranet/cases/CasesList";
 import CasesForm from "@/pages/intranet/cases/CasesForm";
 import CasesHistory from "@/pages/intranet/cases/CasesHistory";
+import MediaLibrary from "@/pages/intranet/MediaLibrary";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ const App = () => (
             <Route path="/intranet/cases/new" element={<CasesForm />} />
             <Route path="/intranet/cases/:id/edit" element={<CasesForm />} />
             <Route path="/intranet/cases/:id/history" element={<CasesHistory />} />
+            <Route path="/intranet/media" element={<MediaLibrary />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -567,6 +567,128 @@ export type Database = {
           },
         ]
       }
+      media_files: {
+        Row: {
+          alt_text: string | null
+          card_path: string | null
+          card_url: string | null
+          created_at: string | null
+          description: string | null
+          file_name: string
+          file_size: number
+          file_type: string
+          height: number | null
+          hero_path: string | null
+          hero_url: string | null
+          id: string
+          last_used_at: string | null
+          mime_type: string
+          original_name: string
+          original_path: string
+          original_url: string
+          tags: string[] | null
+          thumbnail_path: string | null
+          thumbnail_url: string | null
+          title: string | null
+          updated_at: string | null
+          uploaded_at: string | null
+          uploaded_by: string
+          usage_count: number | null
+          width: number | null
+        }
+        Insert: {
+          alt_text?: string | null
+          card_path?: string | null
+          card_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          file_name: string
+          file_size: number
+          file_type: string
+          height?: number | null
+          hero_path?: string | null
+          hero_url?: string | null
+          id?: string
+          last_used_at?: string | null
+          mime_type: string
+          original_name: string
+          original_path: string
+          original_url: string
+          tags?: string[] | null
+          thumbnail_path?: string | null
+          thumbnail_url?: string | null
+          title?: string | null
+          updated_at?: string | null
+          uploaded_at?: string | null
+          uploaded_by: string
+          usage_count?: number | null
+          width?: number | null
+        }
+        Update: {
+          alt_text?: string | null
+          card_path?: string | null
+          card_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          file_name?: string
+          file_size?: number
+          file_type?: string
+          height?: number | null
+          hero_path?: string | null
+          hero_url?: string | null
+          id?: string
+          last_used_at?: string | null
+          mime_type?: string
+          original_name?: string
+          original_path?: string
+          original_url?: string
+          tags?: string[] | null
+          thumbnail_path?: string | null
+          thumbnail_url?: string | null
+          title?: string | null
+          updated_at?: string | null
+          uploaded_at?: string | null
+          uploaded_by?: string
+          usage_count?: number | null
+          width?: number | null
+        }
+        Relationships: []
+      }
+      media_usage: {
+        Row: {
+          created_at: string | null
+          entity_id: string
+          entity_type: string
+          id: string
+          media_file_id: string
+          usage_type: string
+        }
+        Insert: {
+          created_at?: string | null
+          entity_id: string
+          entity_type: string
+          id?: string
+          media_file_id: string
+          usage_type: string
+        }
+        Update: {
+          created_at?: string | null
+          entity_id?: string
+          entity_type?: string
+          id?: string
+          media_file_id?: string
+          usage_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "media_usage_media_file_id_fkey"
+            columns: ["media_file_id"]
+            isOneToOne: false
+            referencedRelation: "media_files"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       movimientos_mes: {
         Row: {
           aprobado: boolean | null
