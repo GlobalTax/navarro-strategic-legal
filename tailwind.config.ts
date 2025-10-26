@@ -130,6 +130,16 @@ export default {
             transform: "scale(1.05)" 
           }
         },
+        "scroll-reveal": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(30px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -139,6 +149,7 @@ export default {
         "count-up": "count-up 0.8s ease-out",
         "lift": "lift 0.3s ease-out",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+        "scroll-reveal": "scroll-reveal 0.8s ease-out forwards",
       },
     },
   },
