@@ -54,10 +54,14 @@ const App = () => (
               {/* Intranet Routes */}
               <Route path="/intranet/login" element={<Login />} />
               <Route path="/intranet/dashboard" element={<Dashboard />} />
-              <Route path="/intranet/personas" element={<PersonasList />} />
-              <Route path="/intranet/personas/new" element={<PersonasForm />} />
-              <Route path="/intranet/personas/:id" element={<PersonasDetail />} />
-              <Route path="/intranet/personas/:id/edit" element={<PersonasForm />} />
+            <Route path="/intranet/personas" element={<PersonasList />} />
+            <Route path="/intranet/personas/new" element={<PersonasForm />} />
+            <Route path="/intranet/personas/:id" element={<PersonasDetail />} />
+            <Route path="/intranet/personas/:id/edit" element={<PersonasForm />} />
+            <Route path="/intranet/blog" element={<BlogList />} />
+            <Route path="/intranet/blog/new" element={<BlogForm />} />
+            <Route path="/intranet/blog/:id/edit" element={<BlogForm />} />
+            <Route path="/intranet/blog/:id/history" element={<BlogHistory />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
