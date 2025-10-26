@@ -28,6 +28,9 @@ import PersonasDetail from "@/pages/intranet/personas/PersonasDetail";
 import BlogList from "@/pages/intranet/blog/BlogList";
 import BlogForm from "@/pages/intranet/blog/BlogForm";
 import BlogHistory from "@/pages/intranet/blog/BlogHistory";
+import CasesList from "@/pages/intranet/cases/CasesList";
+import CasesForm from "@/pages/intranet/cases/CasesForm";
+import CasesHistory from "@/pages/intranet/cases/CasesHistory";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +69,10 @@ const App = () => (
             <Route path="/intranet/blog/new" element={<BlogForm />} />
             <Route path="/intranet/blog/:id/edit" element={<BlogForm />} />
             <Route path="/intranet/blog/:id/history" element={<BlogHistory />} />
+            <Route path="/intranet/cases" element={<CasesList />} />
+            <Route path="/intranet/cases/new" element={<CasesForm />} />
+            <Route path="/intranet/cases/:id/edit" element={<CasesForm />} />
+            <Route path="/intranet/cases/:id/history" element={<CasesHistory />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
