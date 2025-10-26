@@ -42,7 +42,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Base colors - Graphite, Snow, Olive */
-    --background: 0 0% 98%;
+    --background: 0 0% 100%;
     --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
@@ -52,19 +52,19 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 10%;
 
     --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
+    --secondary: 0 0% 100%;
     --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 94%;
+    --muted: 0 0% 97%;
     --muted-foreground: 0 0% 40%;
 
     --accent: 43 30% 62%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
@@ -72,15 +72,15 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 0% 100%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
     --sidebar-primary: 240 5.9% 10%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 240 4.8% 98%;
 
     --sidebar-accent-foreground: 240 5.9% 10%;
 
@@ -108,7 +108,7 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif font-light;
   }
 }
 
@@ -176,9 +176,10 @@ All colors MUST be HSL.
 
   /* Editorial text styling for narrative sections */
   .editorial-text {
-    font-family: 'Playfair Display', serif;
+    font-family: 'General Sans', serif;
     line-height: 1.8;
     text-align: center;
+    font-weight: 300;
   }
 
   /* Smooth scroll reveal */
