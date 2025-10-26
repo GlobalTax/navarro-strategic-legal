@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
@@ -22,7 +23,6 @@ import {
   Minimize,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface RichTextEditorProps {
