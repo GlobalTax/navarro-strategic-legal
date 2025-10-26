@@ -44,9 +44,9 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-texture">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container-custom relative z-10 text-center animate-fade-in py-20">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight text-foreground">
+          <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight text-foreground">
             Asesoramiento estratégico<br />y legal para empresas y grupos
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto font-light">
@@ -98,7 +98,7 @@ const Index = () => {
       <section className="section-spacing bg-secondary/30">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Áreas de práctica</h2>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">Áreas de práctica</h2>
             <p className="text-lg text-muted-foreground">Soluciones especializadas para cada necesidad</p>
           </div>
           
@@ -125,10 +125,10 @@ const Index = () => {
       </section>
 
       {/* Empresa Familiar Highlight - Full Width Parallax */}
-      <section className="parallax-section min-h-[60vh] flex items-center justify-center relative py-32 bg-gradient-to-br from-primary/95 to-primary/80">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+      <section className="parallax-section min-h-[60vh] flex items-center justify-center relative py-32 bg-primary">
+        <div className="absolute inset-0 bg-primary" />
         <div className="container-custom relative z-10 text-center text-primary-foreground">
-          <blockquote className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
+          <blockquote className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
             "El legado no se improvisa;<br />se planifica."
           </blockquote>
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
@@ -148,7 +148,7 @@ const Index = () => {
       <section className="section-spacing bg-secondary/30">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Casos de éxito</h2>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">Casos de éxito</h2>
             <p className="text-lg text-muted-foreground">Resultados que hablan por sí mismos</p>
           </div>
           
@@ -179,7 +179,7 @@ const Index = () => {
       <section className="section-spacing">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">
               El equipo detrás de cada estrategia
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -206,9 +206,9 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="gradient-cta py-24">
+      <section className="bg-accent py-24">
         <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-primary-foreground">
+          <h2 className="text-4xl md:text-5xl font-serif mb-4 text-accent-foreground">
             ¿Hablamos de tu proyecto?
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">

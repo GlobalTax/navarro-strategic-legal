@@ -15,10 +15,10 @@ const ServiceCTABlock = ({
   ctaLink = "/contacto",
 }: ServiceCTABlockProps) => {
   return (
-    <section className="py-24 bg-gradient-to-br from-accent/10 to-white">
+    <section className="py-24 bg-white">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#1A1A1A]">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-[#1A1A1A]">
             {title}
           </h2>
           <p className="text-xl text-muted-foreground mb-8">{subtitle}</p>

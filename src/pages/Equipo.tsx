@@ -285,9 +285,9 @@ const Equipo = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary to-primary/90">
+      <section className="pt-32 pb-20 bg-primary">
         <div className="container-custom text-center text-primary-foreground animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-serif mb-6">
             Nuestro equipo
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">

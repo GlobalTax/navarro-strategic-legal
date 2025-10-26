@@ -42,9 +42,9 @@ const Servicios = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary to-primary/90">
+      <section className="pt-32 pb-20 bg-primary">
         <div className="container-custom text-center text-primary-foreground animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">Nuestros servicios</h1>
+          <h1 className="text-5xl md:text-6xl font-serif mb-6">Nuestros servicios</h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
             Soluciones jurídicas integrales diseñadas para empresas y familias que buscan excelencia
           </p>
@@ -96,7 +96,7 @@ const Servicios = () => {
       {/* CTA Section */}
       <section className="section-spacing bg-secondary/30">
         <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">
             ¿Necesitas asesoramiento especializado?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

@@ -34,7 +34,7 @@ const CycleStage = ({
       </div>
       {showConnector && (
         <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 -translate-y-1/2 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-r from-accent via-accent/50 to-transparent" />
+          <div className="w-full h-full bg-accent/30" />
           <div className="absolute right-0 top-1/2 -translate-y-1/2 text-accent text-2xl -mr-3">
             →
           </div>

@@ -25,13 +25,13 @@ const EmpresaFamiliar = () => {
       {/* Hero Section */}
       <section 
         ref={heroReveal.ref}
-        className={`min-h-[70vh] pt-32 pb-20 bg-gradient-to-br from-secondary/50 to-background relative overflow-hidden transition-all duration-1000 ${
+        className={`min-h-[70vh] pt-32 pb-20 bg-white relative overflow-hidden transition-all duration-1000 ${
           heroReveal.isVisible ? 'animate-scroll-reveal' : 'scroll-reveal-hidden'
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container-custom relative z-10 flex flex-col justify-center min-h-[50vh]">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-foreground">
+          <h1 className="text-5xl md:text-7xl font-serif mb-6 text-foreground">
             Empresa Familiar
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-8">
@@ -83,7 +83,7 @@ const EmpresaFamiliar = () => {
         }`}
       >
         <div className="container-custom">
-          <h2 className="text-4xl font-serif font-bold text-center mb-16 text-foreground">
+          <h2 className="text-4xl font-serif text-center mb-16 text-foreground">
             El ciclo de la empresa familiar
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
@@ -119,7 +119,7 @@ const EmpresaFamiliar = () => {
         }`}
       >
         <div className="container-custom">
-          <h2 className="text-4xl font-serif font-bold text-center mb-12 text-foreground">
+          <h2 className="text-4xl font-serif text-center mb-12 text-foreground">
             Áreas relacionadas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -156,7 +156,7 @@ const EmpresaFamiliar = () => {
         }`}
       >
         <div className="container-custom">
-          <h2 className="text-4xl font-serif font-bold text-center mb-12 text-foreground">
+          <h2 className="text-4xl font-serif text-center mb-12 text-foreground">
             Historias de continuidad
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -192,12 +192,12 @@ const EmpresaFamiliar = () => {
       {/* Final CTA */}
       <section 
         ref={ctaReveal.ref}
-        className={`py-24 bg-gradient-to-br from-accent/10 via-background to-secondary/30 transition-all duration-1000 ${
+        className={`py-24 bg-white transition-all duration-1000 ${
           ctaReveal.isVisible ? 'animate-scroll-reveal' : 'scroll-reveal-hidden'
         }`}
       >
         <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-foreground">
             ¿Preparado para asegurar el futuro de tu empresa familiar?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

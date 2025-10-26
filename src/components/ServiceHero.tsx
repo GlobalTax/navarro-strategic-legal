@@ -17,11 +17,11 @@ const ServiceHero = ({
   ctaLink = "/contacto",
 }: ServiceHeroProps) => {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-[#F9F9F9] to-white">
+    <section className="pt-32 pb-20 bg-white">
       <div className="container-custom animate-fade-in">
         <div className="flex items-center gap-4 mb-6">
           <Icon className="w-16 h-16 text-[#1A1A1A]" strokeWidth={2} />
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#1A1A1A]">{title}</h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-[#1A1A1A]">{title}</h1>
         </div>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-8">
           {subtitle}

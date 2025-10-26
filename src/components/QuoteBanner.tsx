@@ -5,11 +5,11 @@ interface QuoteBannerProps {
 
 const QuoteBanner = ({ quote, author }: QuoteBannerProps) => {
   return (
-    <section className="min-h-[40vh] flex items-center justify-center py-20 bg-gradient-to-r from-secondary via-accent/20 to-secondary">
+    <section className="min-h-[40vh] flex items-center justify-center py-20 bg-secondary">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-20 h-1 bg-accent mx-auto mb-8" />
-          <blockquote className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight mb-6">
+          <blockquote className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-tight mb-6">
             "{quote}"
           </blockquote>
           {author && (

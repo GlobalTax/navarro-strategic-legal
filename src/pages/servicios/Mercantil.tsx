@@ -23,11 +23,11 @@ const Mercantil = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary to-primary/90">
+      <section className="pt-32 pb-20 bg-primary">
         <div className="container-custom text-primary-foreground animate-fade-in">
           <div className="flex items-center gap-4 mb-6">
             <Building2 className="w-16 h-16" />
-            <h1 className="text-5xl md:text-6xl font-serif font-bold">Derecho Mercantil</h1>
+            <h1 className="text-5xl md:text-6xl font-serif">Derecho Mercantil</h1>
           </div>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl">
             Asesoramiento societario integral y operaciones corporativas
@@ -39,7 +39,7 @@ const Mercantil = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-serif font-bold mb-6">Tu partner corporativo de confianza</h2>
+              <h2 className="text-4xl font-serif mb-6">Tu partner corporativo de confianza</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Desde la constitución de tu empresa hasta las operaciones más complejas de reestructuración, 
                 en Navarro te acompañamos en cada etapa del ciclo de vida corporativo.
@@ -74,7 +74,7 @@ const Mercantil = () => {
 
       <section className="section-spacing bg-secondary/30">
         <div className="container-custom">
-          <h2 className="text-4xl font-serif font-bold text-center mb-16">Casos de éxito</h2>
+          <h2 className="text-4xl font-serif text-center mb-16">Casos de éxito</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 border-border">
               <h3 className="text-xl font-semibold mb-3">Reestructuración de grupo familiar</h3>

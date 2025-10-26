@@ -23,11 +23,11 @@ const MA = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary to-primary/90">
+      <section className="pt-32 pb-20 bg-primary">
         <div className="container-custom text-primary-foreground animate-fade-in">
           <div className="flex items-center gap-4 mb-6">
             <TrendingUp className="w-16 h-16" />
-            <h1 className="text-5xl md:text-6xl font-serif font-bold">Operaciones M&A</h1>
+            <h1 className="text-5xl md:text-6xl font-serif">Operaciones M&A</h1>
           </div>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl">
             Acompañamiento integral en fusiones y adquisiciones
@@ -39,7 +39,7 @@ const MA = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-serif font-bold mb-6">Expertos en operaciones complejas</h2>
+              <h2 className="text-4xl font-serif mb-6">Expertos en operaciones complejas</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Las operaciones de M&A son momentos críticos que requieren experiencia, precisión y visión estratégica. 
                 En Navarro hemos participado en decenas de operaciones, tanto en el lado comprador como vendedor.
@@ -74,7 +74,7 @@ const MA = () => {
 
       <section className="section-spacing bg-secondary/30">
         <div className="container-custom">
-          <h2 className="text-4xl font-serif font-bold text-center mb-16">Proceso de M&A</h2>
+          <h2 className="text-4xl font-serif text-center mb-16">Proceso de M&A</h2>
           <div className="space-y-6 max-w-4xl mx-auto">
             {[
               { phase: "Fase 1", title: "Preparación", desc: "Definición de objetivos, valoración preliminar y estructuración inicial" },
