@@ -152,4 +152,31 @@ All colors MUST be HSL.
   .scroll-reveal-hidden {
     opacity: 0;
   }
+
+  /* Team member card name underline animation */
+  .name-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    transition: width 0.3s ease-out;
+  }
+
+  .name-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Filter badge active state animation */
+  .filter-badge-active {
+    animation: badge-select 0.2s ease-out;
+  }
+
+  @keyframes badge-select {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
 }
