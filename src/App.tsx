@@ -21,9 +21,12 @@ import Cookies from "./pages/legal/Cookies";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/intranet/Login";
 import Dashboard from "./pages/intranet/Dashboard";
-import PersonasList from "./pages/intranet/personas/PersonasList";
-import PersonasForm from "./pages/intranet/personas/PersonasForm";
-import PersonasDetail from "./pages/intranet/personas/PersonasDetail";
+import PersonasList from "@/pages/intranet/personas/PersonasList";
+import PersonasForm from "@/pages/intranet/personas/PersonasForm";
+import PersonasDetail from "@/pages/intranet/personas/PersonasDetail";
+import BlogList from "@/pages/intranet/blog/BlogList";
+import BlogForm from "@/pages/intranet/blog/BlogForm";
+import BlogHistory from "@/pages/intranet/blog/BlogHistory";
 
 const queryClient = new QueryClient();
 

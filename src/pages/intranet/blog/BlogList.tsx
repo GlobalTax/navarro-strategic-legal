@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
-import IntranetLayout from '@/components/intranet/IntranetLayout';
+import { IntranetLayout } from '@/components/intranet/IntranetLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -50,7 +50,7 @@ const BlogList = () => {
     queryKey: ['blog-posts', statusFilter, categoryFilter, search],
     queryFn: async () => {
       let query = supabase
-        .from('blog_posts')
+        .from('blog_posts' as any)
         .select('*, author:author_id(email)')
         .order('created_at', { ascending: false });
 
@@ -75,7 +75,7 @@ const BlogList = () => {
   const handleDelete = async () => {
     if (!deletePostId) return;
 
-    const { error } = await supabase.from('blog_posts').delete().eq('id', deletePostId);
+    const { error } = await supabase.from('blog_posts' as any).delete().eq('id', deletePostId);
 
     if (error) {
       toast({
@@ -95,7 +95,7 @@ const BlogList = () => {
 
   const handleArchive = async (postId: string) => {
     const { error } = await supabase
-      .from('blog_posts')
+      .from('blog_posts' as any)
       .update({ status: 'archived' })
       .eq('id', postId);
 

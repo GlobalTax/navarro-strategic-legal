@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
-import IntranetLayout from '@/components/intranet/IntranetLayout';
+import { IntranetLayout } from '@/components/intranet/IntranetLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -72,38 +72,39 @@ const BlogForm = () => {
     queryFn: async () => {
       if (!id) return null;
       const { data, error } = await supabase
-        .from('blog_posts')
+        .from('blog_posts' as any)
         .select('*')
         .eq('id', id)
         .single();
       if (error) throw error;
-      return data;
+      return data as any;
     },
     enabled: isEdit,
   });
 
   useEffect(() => {
     if (existingPost) {
+      const post = existingPost as any;
       setFormData({
-        title_es: existingPost.title_es || '',
-        slug_es: existingPost.slug_es || '',
-        content_es: existingPost.content_es || '',
-        excerpt_es: existingPost.excerpt_es || '',
-        seo_title_es: existingPost.seo_title_es || '',
-        seo_description_es: existingPost.seo_description_es || '',
-        title_en: existingPost.title_en || '',
-        slug_en: existingPost.slug_en || '',
-        content_en: existingPost.content_en || '',
-        excerpt_en: existingPost.excerpt_en || '',
-        seo_title_en: existingPost.seo_title_en || '',
-        seo_description_en: existingPost.seo_description_en || '',
-        featured_image_url: existingPost.featured_image_url || '',
-        featured_image_alt_es: existingPost.featured_image_alt_es || '',
-        featured_image_alt_en: existingPost.featured_image_alt_en || '',
-        blog_category: existingPost.blog_category || '',
-        tags: existingPost.tags || [],
-        status: existingPost.status as BlogStatus,
-        scheduled_at: existingPost.scheduled_at ? new Date(existingPost.scheduled_at) : null,
+        title_es: post.title_es || '',
+        slug_es: post.slug_es || '',
+        content_es: post.content_es || '',
+        excerpt_es: post.excerpt_es || '',
+        seo_title_es: post.seo_title_es || '',
+        seo_description_es: post.seo_description_es || '',
+        title_en: post.title_en || '',
+        slug_en: post.slug_en || '',
+        content_en: post.content_en || '',
+        excerpt_en: post.excerpt_en || '',
+        seo_title_en: post.seo_title_en || '',
+        seo_description_en: post.seo_description_en || '',
+        featured_image_url: post.featured_image_url || '',
+        featured_image_alt_es: post.featured_image_alt_es || '',
+        featured_image_alt_en: post.featured_image_alt_en || '',
+        blog_category: post.blog_category || '',
+        tags: post.tags || [],
+        status: post.status as BlogStatus,
+        scheduled_at: post.scheduled_at ? new Date(post.scheduled_at) : null,
       });
     }
   }, [existingPost]);
@@ -124,12 +125,13 @@ const BlogForm = () => {
     const interval = setInterval(async () => {
       if (!id) return;
       setAutoSaving(true);
+      const payload: any = {
+        ...formData,
+        read_time_minutes: calculateReadTime(formData.content_es),
+      };
       const { error } = await supabase
-        .from('blog_posts')
-        .update({
-          ...formData,
-          read_time_minutes: calculateReadTime(formData.content_es),
-        })
+        .from('blog_posts' as any)
+        .update(payload)
         .eq('id', id);
 
       if (!error) {
@@ -146,7 +148,7 @@ const BlogForm = () => {
 
   const saveMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
-      const payload = {
+      const payload: any = {
         ...data,
         read_time_minutes: calculateReadTime(data.content_es),
         author_id: user?.id,
@@ -154,21 +156,21 @@ const BlogForm = () => {
 
       if (isEdit && id) {
         const { data: result, error } = await supabase
-          .from('blog_posts')
+          .from('blog_posts' as any)
           .update(payload)
           .eq('id', id)
           .select()
           .single();
         if (error) throw error;
-        return result;
+        return result as any;
       } else {
         const { data: result, error } = await supabase
-          .from('blog_posts')
+          .from('blog_posts' as any)
           .insert(payload)
           .select()
           .single();
         if (error) throw error;
-        return result;
+        return result as any;
       }
     },
     onSuccess: (data) => {
@@ -208,7 +210,7 @@ const BlogForm = () => {
 
   const handleStatusChange = (newStatus: BlogStatus) => {
     const userRole = hasAnyRole(['admin']) ? 'admin' : hasAnyRole(['marketing']) ? 'marketing' : 'editor';
-    const isAuthor = existingPost?.author_id === user?.id;
+    const isAuthor = (existingPost as any)?.author_id === user?.id;
 
     if (!canTransitionStatus(formData.status, newStatus, userRole, isAuthor)) {
       toast({

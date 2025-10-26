@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
-import IntranetLayout from '@/components/intranet/IntranetLayout';
+import { IntranetLayout } from '@/components/intranet/IntranetLayout';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
@@ -17,12 +17,12 @@ const BlogHistory = () => {
     queryKey: ['blog-post', id],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from('blog_posts')
+        .from('blog_posts' as any)
         .select('title_es')
         .eq('id', id)
         .single();
       if (error) throw error;
-      return data;
+      return data as any;
     },
   });
 
@@ -30,12 +30,12 @@ const BlogHistory = () => {
     queryKey: ['blog-history', id],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from('blog_post_state_changes')
+        .from('blog_post_state_changes' as any)
         .select('*, changer:changed_by(email)')
         .eq('post_id', id)
         .order('changed_at', { ascending: false });
       if (error) throw error;
-      return data;
+      return data as any;
     },
   });
 
