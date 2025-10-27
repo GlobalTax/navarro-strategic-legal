@@ -43,13 +43,13 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-texture">
-        <div className="absolute inset-0 bg-white" />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-background" />
         <div className="container-custom relative z-10 text-center animate-fade-in py-20">
-          <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight text-foreground">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight text-foreground">
             Asesoramiento estratégico<br />y legal para empresas y grupos
           </h1>
-          <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto font-light">
+          <p className="text-xl md:text-2xl mb-16 text-muted-foreground max-w-3xl mx-auto font-light">
             Especialistas en empresa familiar: continuidad, gobernanza y crecimiento con seguridad jurídica
           </p>
           
@@ -61,7 +61,7 @@ const Index = () => {
             <CountUpStat value={40} label="cliente internacional" suffix="%" />
           </div>
 
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8">
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-12 py-6 rounded-full">
             <Link to="/contacto" className="flex items-center gap-2">
               Agenda una llamada
               <ArrowRight size={20} />
