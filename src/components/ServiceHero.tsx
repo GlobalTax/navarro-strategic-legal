@@ -28,7 +28,7 @@ const ServiceHero = ({
         </p>
         <Link
           to={ctaLink}
-          className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-foreground px-8 py-4 rounded-full font-medium text-lg transition-all hover:scale-105"
+          className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-foreground px-8 py-4 rounded-full font-medium font-inter text-lg transition-all hover:scale-105"
         >
           {ctaText}
           <ArrowRight size={20} />

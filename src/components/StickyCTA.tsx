@@ -18,7 +18,7 @@ const StickyCTA = ({ text = "Solicita consulta", link = "/contacto" }: StickyCTA
     >
       <Link
         to={link}
-        className="block w-full bg-accent hover:bg-accent/90 text-foreground text-center px-8 py-4 rounded-full shadow-lg font-medium transition-all hover:scale-105"
+        className="block w-full bg-accent hover:bg-accent/90 text-foreground text-center px-8 py-4 rounded-full shadow-lg font-medium font-inter transition-all hover:scale-105"
       >
         {text}
       </Link>
