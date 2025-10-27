@@ -33,8 +33,12 @@ const Navigation = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-2xl font-serif font-bold text-foreground">
-            Navarro
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/navarro.svg" 
+              alt="Navarro Tax & Legal" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

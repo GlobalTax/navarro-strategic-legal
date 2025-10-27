@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About Column */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Navarro</h3>
+            <img 
+              src="/navarro_tax_legal.svg" 
+              alt="Navarro Tax & Legal" 
+              className="h-12 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-6">
               Asesoramiento estratégico y legal de alto nivel para empresas y grupos familiares.
               Soluciones integrales con visión de futuro.
