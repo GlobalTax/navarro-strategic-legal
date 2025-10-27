@@ -8,10 +8,10 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Servicios from "./pages/Servicios";
-import Fiscal from "./pages/servicios/Fiscal";
-import Mercantil from "./pages/servicios/Mercantil";
-import Laboral from "./pages/servicios/Laboral";
-import MA from "./pages/servicios/MA";
+import FiscalNew from "./pages/servicios/FiscalNew";
+import MercantilNew from "./pages/servicios/MercantilNew";
+import LaboralNew from "./pages/servicios/LaboralNew";
+import MANew from "./pages/servicios/MANew";
 import EmpresaFamiliar from "./pages/EmpresaFamiliar";
 import Equipo from "./pages/Equipo";
 import Insights from "./pages/Insights";
@@ -49,10 +49,10 @@ const App = () => (
               {/* Public Routes */}
               <Route path="/" element={<Index />} />
               <Route path="/servicios" element={<Servicios />} />
-              <Route path="/servicios/fiscal" element={<Fiscal />} />
-              <Route path="/servicios/mercantil" element={<Mercantil />} />
-              <Route path="/servicios/laboral" element={<Laboral />} />
-              <Route path="/servicios/ma" element={<MA />} />
+              <Route path="/servicios/fiscal" element={<FiscalNew />} />
+              <Route path="/servicios/mercantil" element={<MercantilNew />} />
+              <Route path="/servicios/laboral" element={<LaboralNew />} />
+              <Route path="/servicios/ma" element={<MANew />} />
               <Route path="/empresa-familiar" element={<EmpresaFamiliar />} />
               <Route path="/equipo" element={<Equipo />} />
               <Route path="/insights" element={<Insights />} />
