@@ -60,15 +60,15 @@ All colors MUST be HSL.
     --muted: 0 0% 97%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 43 30% 62%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 192 29% 13%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 43 30% 62%;
+    --ring: 192 29% 13%;
 
     --radius: 1rem;
 
@@ -148,7 +148,7 @@ All colors MUST be HSL.
   }
 
   .gradient-cta {
-    background: linear-gradient(135deg, hsl(43, 30%, 62%) 0%, hsl(0, 0%, 10%) 100%);
+    background: linear-gradient(135deg, hsl(192, 29%, 13%) 0%, hsl(0, 0%, 10%) 100%);
   }
 
   /* Step number badge for timeline */
